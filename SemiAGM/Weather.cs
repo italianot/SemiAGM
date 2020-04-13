@@ -55,7 +55,6 @@ namespace SemiAGM
             str += String.Format("\nВеличина осадков: {0} см", this.Precipitation);
             str += String.Format("\nНаличие радуги: {0}", this.Rainbow);
             str += String.Format("\nНаличие грозы: {0}", this.Storm);
-
             return str;
         }
         public static Rain Generate()
