@@ -50,23 +50,23 @@
             this.txtInfo.Location = new System.Drawing.Point(18, 61);
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ReadOnly = true;
-            this.txtInfo.Size = new System.Drawing.Size(326, 96);
+            this.txtInfo.Size = new System.Drawing.Size(326, 36);
             this.txtInfo.TabIndex = 1;
             this.txtInfo.Text = "";
             // 
             // txtOut
             // 
-            this.txtOut.Location = new System.Drawing.Point(18, 163);
+            this.txtOut.Location = new System.Drawing.Point(18, 135);
             this.txtOut.Name = "txtOut";
-            this.txtOut.Size = new System.Drawing.Size(197, 145);
+            this.txtOut.Size = new System.Drawing.Size(211, 173);
             this.txtOut.TabIndex = 2;
             this.txtOut.Text = "";
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(221, 163);
+            this.btnGet.Location = new System.Drawing.Point(235, 135);
             this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(123, 145);
+            this.btnGet.Size = new System.Drawing.Size(109, 173);
             this.btnGet.TabIndex = 3;
             this.btnGet.Text = "Взять";
             this.btnGet.UseVisualStyleBackColor = true;

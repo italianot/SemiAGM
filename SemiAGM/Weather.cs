@@ -24,10 +24,16 @@ namespace SemiAGM
 
         public override String GetInfo()
         {
-            var str = "Я солнце";
+            var str = "Солнце";
             str += base.GetInfo();
             str += String.Format("\nВысота солнца над горизонтом: {0}°", this.HeightOfTheSun);
-            str += String.Format("\nНаличие свежего ветерка: {0}", this.Wind);
+            if (this.Wind == true) {
+                str += String.Format("\nCвежий ветерок присутствует");
+            }
+            else
+            {
+                str += String.Format("\nCвежий ветерок отсутствует");
+            }
             return str;
         }
 
@@ -50,11 +56,25 @@ namespace SemiAGM
 
         public override String GetInfo()
         {
-            var str = "Я дождь";
+            var str = "Дождь";
             str += base.GetInfo();
             str += String.Format("\nВеличина осадков: {0} см", this.Precipitation);
-            str += String.Format("\nНаличие радуги: {0}", this.Rainbow);
-            str += String.Format("\nНаличие грозы: {0}", this.Storm);
+            if (this.Rainbow == true)
+            {
+                str += String.Format("\nРадуга сияет в небе (*♡∀♡)");
+            }
+            else
+            {
+                str += String.Format("\nНет радуги ٩(╬ʘ益ʘ╬)۶");
+            }
+            if (this.Storm == true)
+            {
+                str += String.Format("\nДует свежий ветерок");
+            }
+            else
+            {
+                str += String.Format("\nШтиль - ветер молчит\nУпал белой чайкой на дно\nШтиль - наш корабль забыт\nОдин, в мире скованном сном...");
+            }
             return str;
         }
         public static Rain Generate()
@@ -69,15 +89,15 @@ namespace SemiAGM
         }
     }
 
-    public enum SnowType { flake, fine };
+    public enum SnowType { Хлопья, Мелкий };
     public class Snow : Weather
     {
-        public SnowType type = SnowType.fine; // тип снега
+        public SnowType type = SnowType.Хлопья; // тип снега
         public int HeightOfTheSnow = 0; // высота снега
 
         public override String GetInfo()
         {
-            var str = "Я снег";
+            var str = "Снег";
             str += base.GetInfo();
             str += String.Format("\nТип: {0}", this.type);
             str += String.Format("\nВысота снега: {0} см", this.HeightOfTheSnow);
