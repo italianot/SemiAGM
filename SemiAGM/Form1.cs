@@ -48,25 +48,33 @@ namespace SemiAGM
             int rainCount = 0;
             int snowCount = 0;
 
+            order.Text = "Очередь:\n";
+            int i = 0;
+
+
             foreach (var weather in this.weatherList)
             {
+                i++;
                 if (weather is Sun)
                 {
                     sunCount += 1;
+                    order.Text += i + ". Солнце\n";
                 }
                 else if (weather is Rain)
                 {
                     rainCount += 1;
+                    order.Text += i + ". Дождь\n";
                 }
                 else if (weather is Snow)
                 {
                     snowCount += 1;
+                    order.Text += i + ". Снег\n";
                 }
             }
 
-            txtInfo.Text = "Солнце\tДождь\tСнег";
+            txtInfo.Text = "Солнце\t\tДождь\t\tСнег";
             txtInfo.Text += "\n";
-            txtInfo.Text += String.Format("{0}\t{1}\t{2}", sunCount, rainCount, snowCount);
+            txtInfo.Text += String.Format("{0}\t\t{1}\t\t{2}", sunCount, rainCount, snowCount);
         }
 
         private void btnGet_Click(object sender, EventArgs e)
