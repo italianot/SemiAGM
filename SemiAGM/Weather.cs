@@ -69,11 +69,11 @@ namespace SemiAGM
             }
             if (this.Storm == true)
             {
-                str += String.Format("\nДует свежий ветерок");
+                str += String.Format("\nБушует гроза");
             }
             else
             {
-                str += String.Format("\nШтиль - ветер молчит\nУпал белой чайкой на дно\nШтиль - наш корабль забыт\nОдин, в мире скованном сном...");
+                str += String.Format("\nГроза не предвещается");
             }
             return str;
         }
